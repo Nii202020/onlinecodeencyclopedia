@@ -3,7 +3,7 @@ const toggleButton = document.getElementById('mode-toggle');
 // Check for saved user preference in local storage
 if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-mode');
-    toggleButton.textContent = 'Switch to Light Mode';
+    toggleButton.textContent = 'Light';
 }
 
 toggleButton.addEventListener('click', () => {
@@ -12,9 +12,9 @@ toggleButton.addEventListener('click', () => {
     // Update local storage based on current mode
     if (document.body.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark');
-        toggleButton.textContent = 'Switch to Light Mode';
+        toggleButton.textContent = 'Light';
     } else {
         localStorage.setItem('theme', 'light');
-        toggleButton.textContent = 'Switch to Dark Mode';
+        toggleButton.textContent = 'Dark';
     }
 });
